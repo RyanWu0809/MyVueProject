@@ -1,3 +1,6 @@
+# MyVueProject
+ShopFloor Practice
+
 # practicenewproj
 
 ## Project setup
