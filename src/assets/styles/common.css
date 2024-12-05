@@ -1,0 +1,189 @@
+/* 輸入框群組樣式 */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* 標籤樣式 */
+label {
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* 輸入條件 */
+.input-condition{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.input-condition label {
+    width: 100px; /* 統一標籤寬度 */
+    margin-right: 10px;
+    text-align: right; /* 標籤文字右對齊 */
+}
+
+/* 輸入框樣式 */
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 分隔線樣式 */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #d8d7d7; /* 分隔線顏色 */
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+/* 區塊樣式 */
+.section-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-top: 3px solid #2980b9;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 區塊樣式 */
+.container-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 確認按鈕樣式 */
+.confirm-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+.confirm-button:hover {
+    background-color: #2980b9;
+}
+
+/*匯入excel Button*/
+.import-btn {
+    background-color: #22a056;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.import-btn:hover {
+    background-color: #1a7a42;
+}
+  
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+  
+/* Loading Spinner */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 模態背景遮罩 */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    z-index: 999; /* 位於面板後面但覆蓋主畫面 */
+}
+
+/* 模態面板 */
+.modal-panel {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000; /* 位於遮罩之上 */
+    width: 50%;
+}
+
+.modalPanel-header {
+    display: flex;
+    justify-content: space-between; /* 標題與按鈕分兩邊 */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f9fa;
+}
+
+.modalPanel-header h4 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.modal-panel button {
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-panel button:hover {
+    background: #d32f2f;
+}
+
+/* 過站操作區塊 */
+.operation-block {
+    width: 50%;
+}
+  
+/* 過站結果區塊 */
+.result-block {
+    width: 50%; 
+}
