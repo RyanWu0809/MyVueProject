@@ -1,18 +1,24 @@
 <template>
   <div class="TestResultInByCsv">
     <div class="operation-block">
-      <!-- 匯入按鈕 -->
-      <button class="import-btn" @click="ImportCsv">
-        <img src="@/assets/Excel_Logo.png" alt="Excel Logo" class="excel-logo" />
-        匯入.Csv
-      </button>
-      <input 
-        type="file" 
-        ref="fileInput" 
-        accept=".csv" 
-        class="hidden-file-input" 
-        @change="handleFileSelect" 
-      />
+      <div class="import-section">
+        <!-- 匯入按鈕 -->
+        <button class="import-btn" @click="ImportCsv">
+          <img src="@/assets/Excel_Logo.png" alt="Excel Logo" class="excel-logo" />
+          匯入.Csv
+        </button>
+        <input 
+          type="file" 
+          ref="fileInput" 
+          accept=".csv" 
+          class="hidden-file-input" 
+          @change="handleFileSelect" 
+        />
+
+        <!-- 下載模板連結 -->
+        <a @click="downloadCsvTemplate" class="download-template">下載 .csv 模板</a>
+
+      </div>
 
       <!-- 表格 -->
       <div v-if="tableData.length" class="table-container">
@@ -262,6 +268,25 @@ export default {
 
       } 
     },
+
+    downloadCsvTemplate(){
+      // CSV 文件内容
+      const csvContent = `SN,TEST_VALUE,UPPER_LIMIT,LOWER_LIMIT,TEST_RESULT`;
+
+      // 创建 Blob 对象
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+      // 创建下载链接
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'TestResults_Example.csv'; // 下载的文件名
+      link.click();
+
+      // 释放内存
+      URL.revokeObjectURL(url);
+
+    },
   },
 };
 </script>
@@ -287,6 +312,13 @@ export default {
 
 .hidden-file-input {
   display: none;
+}
+
+/* 匯入按鈕與模板連結排列 */
+.import-section {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* 按鈕與連結間距 */
 }
 
 .table-container {

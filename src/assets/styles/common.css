@@ -187,3 +187,15 @@ input {
 .result-block {
     width: 50%; 
 }
+
+/* 超連結樣式 */
+.download-template {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+.download-template:hover {
+    color: darkblue;
+}
