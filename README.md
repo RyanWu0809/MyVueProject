@@ -7,9 +7,10 @@ ShopFloor Practice
 ├── dist (npm run build 打包生成)
 │   └── web.config (打包時由generate-web-config.js 生成)
 ├── node_modules (node安裝的工具模組)
-├── public (原始码)
-│   └── Logo.ico(主圖示)
-├── src(原始碼)
+├── public 
+│   ├── index.html 
+│   └── Logo.ico (客製主圖示)
+├── src (原始碼)
 │   ├── assets 
 │   │   └── styles 
 │   │       └── common.css 
@@ -29,7 +30,7 @@ ShopFloor Practice
 ## 部署IIS說明
 參考網址 : https://www.ctong.top/posts/publish-vue3-website-with-iis  
 1. 執行npm run build，會打包在dist資料夾裡
-2. 打開IIS服務 >> 找到"站台" >> 右鍵新增網站
+2. 打開IIS服務 >> 左側功能欄找到"站台" >> 右鍵新增網站
 3. 將新增的網站路徑指到打包好的dist資料夾
 4. 需至 https://www.iis.net/downloads/microsoft/application-request-routing  下載 IIS ARR 
    https://www.iis.net/downloads/microsoft/url-rewrite  下載 IIS URL Rewrite
