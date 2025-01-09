@@ -262,7 +262,7 @@ export default {
 
         this.records.push({
           Time: currentTime,
-          mainSN: this.mainSN,
+          mainSN: mainSN,
           result: result
         });
 
